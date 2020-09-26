@@ -101,7 +101,9 @@ MonoBehaviour:
   speed: 5
   jumpSpeed: 400
   slashCd: 0.52
-  slashDuration: 0.2
+  slashDuration: 0.1
+  damage: 1
+  pv: 3
 --- !u!114 &3300639370541637734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3300639370564048423}
   - component: {fileID: 3300639371184557992}
+  - component: {fileID: 6022203685489691181}
   m_Layer: 0
   m_Name: hit_zone
   m_TagString: Untagged
@@ -336,6 +339,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6022203685489691181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3300639371184557993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a0ecbe7859a0d48a127c9e2534eee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3300639371216522633
 GameObject:
   m_ObjectHideFlags: 0

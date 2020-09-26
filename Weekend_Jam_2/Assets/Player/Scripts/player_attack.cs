@@ -18,8 +18,6 @@ public class player_attack : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
-    Debug.Log(slash);
-
     if (slash > 0)
       slash -= Time.deltaTime;
 
