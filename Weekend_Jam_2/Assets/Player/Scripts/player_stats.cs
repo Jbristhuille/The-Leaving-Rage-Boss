@@ -6,6 +6,8 @@ public class player_stats : MonoBehaviour {
   public bool isGrounded;
   public float speed;
   public float jumpSpeed;
+  public float slashCd;
+  public float slashDuration;
 
   // Start is called before the first frame update
   void Start() {
