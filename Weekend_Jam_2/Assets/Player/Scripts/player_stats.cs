@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class player_stats : MonoBehaviour {
   public bool isGrounded;
+
   public float speed;
   public float jumpSpeed;
-  public float slashCd;
-  public float slashDuration;
+
   public int damage;
   public int pv;
+
+  public float slashCd;
+  public float slashDuration;
+
+  public bool onDash;
+  public float dashCd;
+  public float dashSpeed;
+  public float dashDuration;
 
   // Start is called before the first frame update
   void Start() {

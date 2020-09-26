@@ -30,7 +30,8 @@ public class player_move : MonoBehaviour {
     gameObject.transform.localScale = newScale;
     /***/
 
-    rb.velocity = new Vector2(direction*ps.speed, rb.velocity.y); // Horizontal movements
+    if (!ps.onDash)
+      rb.velocity = new Vector2(direction*ps.speed, rb.velocity.y); // Horizontal movements
 
     /* Jump */
     if (Input.GetAxis("jump") > 0 && ps.isGrounded) {

@@ -100,10 +100,14 @@ MonoBehaviour:
   isGrounded: 0
   speed: 5
   jumpSpeed: 400
-  slashCd: 0.52
-  slashDuration: 0.1
   damage: 1
   pv: 3
+  slashCd: 0.5
+  slashDuration: 0.1
+  onDash: 0
+  dashCd: 2
+  dashSpeed: 400
+  dashDuration: 0.2
 --- !u!114 &3300639370541637734
 MonoBehaviour:
   m_ObjectHideFlags: 0
