@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 2699262610444184333}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   dashCd: 2
   dashSpeed: 800
   dashDuration: 0.2
-  fireCd: 3
+  fireCd: 1.5
   fireSpeed: 15
 --- !u!114 &3300639370541637734
 MonoBehaviour:
