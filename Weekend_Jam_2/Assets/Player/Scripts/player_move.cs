@@ -7,11 +7,13 @@ public class player_move : MonoBehaviour {
   private player_stats ps;
   private float direction;
   private Vector3 newScale;
+  private Animator animation;
 
   // Start is called before the first frame update
   void Start() {
     rb = gameObject.GetComponent<Rigidbody2D>();
     ps = gameObject.GetComponent<player_stats>();
+    animation = gameObject.GetComponent<Animator>();
   }
 
   // Update is called once per frame
@@ -30,8 +32,11 @@ public class player_move : MonoBehaviour {
     gameObject.transform.localScale = newScale;
     /***/
 
-    if (!ps.onDash)
+    if (!ps.onDash) {
+      animation.SetFloat("speed", Mathf.Abs(direction));
       rb.velocity = new Vector2(direction*ps.speed, rb.velocity.y); // Horizontal movements
+    }
+
 
     /* Jump */
     if (Input.GetAxis("jump") > 0 && ps.isGrounded) {

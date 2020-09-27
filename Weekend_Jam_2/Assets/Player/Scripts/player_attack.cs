@@ -6,6 +6,7 @@ public class player_attack : MonoBehaviour {
   private player_stats ps;
   private GameObject hitbox;
   private Rigidbody2D rb;
+  private Animator animator;
 
   private float slash;
   private float slashDurationCounter;
@@ -20,6 +21,7 @@ public class player_attack : MonoBehaviour {
     ps = GameObject.Find("Player").GetComponent<player_stats>();
     hitbox = GameObject.Find("hit_zone");
     rb = gameObject.GetComponent<Rigidbody2D>();
+    animator = gameObject.GetComponent<Animator>();
 
     slash = 0;
     slashDurationCounter = 0;
@@ -34,8 +36,6 @@ public class player_attack : MonoBehaviour {
   void Update() {
     /* Dash attak */
     if (Input.GetAxis("dash") > 0 && dash <= 0) {
-      Debug.Log("Hello world");
-
       if (Input.GetAxis("horizontal") > 0)
         direction = 1;
       else
@@ -64,9 +64,11 @@ public class player_attack : MonoBehaviour {
       slash = ps.slashCd;
       slashDurationCounter = ps.slashDuration;
 
+      animator.SetBool("slash", true); // Animation
       hitbox.SetActive(true);
     } else {
       if (slashDurationCounter <= 0) {
+        animator.SetBool("slash", false); // Animation
         hitbox.SetActive(false);
       } else {
         slashDurationCounter -= Time.deltaTime;
