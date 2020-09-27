@@ -25,8 +25,10 @@ public class final_boss : MonoBehaviour {
 
   // Update is called once per frame
   void Update() {
-    if (stats.pv <= 0)
+    if (stats.pv <= 0) {
       Destroy(gameObject);
+      GameObject.Find("Canvas").transform.Find("victory").gameObject.SetActive(true);
+    }
 
     if (cd <= 0 && ready) {
       ready = false;
