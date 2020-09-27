@@ -29,18 +29,8 @@ public class final_boss : MonoBehaviour {
       Destroy(gameObject);
 
     if (cd <= 0 && ready) {
-      action = Random.Range(-1f, 1f) > 0 ? 1 : 2;
-
-      Debug.Log(action);
-
       ready = false;
-      if (action == 1) { // Rush
-        rb.velocity = new Vector2(speed*gameObject.transform.localScale.x, 0);
-      } else if (action == 2) { // Launch objects
-        cd = couldownAction;
-        ready = true;
-        Instantiate(firePrefab, firePoint.transform.position, Quaternion.identity);
-      }
+      rb.velocity = new Vector2(speed*gameObject.transform.localScale.x, 0);
     } else {
       cd -= Time.deltaTime;
     }
@@ -56,7 +46,12 @@ public class final_boss : MonoBehaviour {
 
     if (col.gameObject.tag == "Player") {
       player_stats ps = GameObject.Find("Player").GetComponent<player_stats>();
-      ps.pv -= damage;
+
+      if (!ps.noDamage) {
+        ps.pv -= damage;
+        ps.noDamage = true;
+        ps.damageCd = ps.noDamageTimer;
+      }
     }
   }
 }

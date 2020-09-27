@@ -23,6 +23,10 @@ public class player_stats : MonoBehaviour {
   public float fireCd;
   public float fireSpeed;
 
+  public float noDamageTimer;
+  public bool noDamage = false;
+  public float damageCd;
+
   // Start is called before the first frame update
   void Start() {
   }
@@ -31,6 +35,12 @@ public class player_stats : MonoBehaviour {
   void Update() {
     if (pv <= 0) { // Player death
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    if (damageCd > 0) {
+      damageCd -= Time.deltaTime;
+    } else if (noDamage) {
+      noDamage = false;
     }
   }
 }
