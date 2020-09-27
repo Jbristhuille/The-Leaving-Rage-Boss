@@ -47,6 +47,7 @@ public class player_attack : MonoBehaviour {
       else
         direction = -1;
 
+      rb.velocity = new Vector2(rb.velocity.x, 0);
       rb.AddForce(new Vector2(ps.dashSpeed * direction, 0));
       ps.onDash = true;
       dashDuration = ps.dashDuration;
