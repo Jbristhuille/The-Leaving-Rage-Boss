@@ -16,6 +16,10 @@ public class player_attack : MonoBehaviour {
 
   private float direction;
 
+  private float fire;
+  private GameObject firePoint;
+  public GameObject firePrefab;
+
   // Start is called before the first frame update
   void Start() {
     ps = GameObject.Find("Player").GetComponent<player_stats>();
@@ -30,6 +34,8 @@ public class player_attack : MonoBehaviour {
     dashDuration = 0;
 
     direction = -1;
+
+    firePoint = GameObject.Find("firePoint");
   }
 
   // Update is called once per frame
@@ -73,6 +79,17 @@ public class player_attack : MonoBehaviour {
       } else {
         slashDurationCounter -= Time.deltaTime;
       }
+    }
+    /***/
+
+    /* fire attack */
+    if (fire > 0) {
+      fire -= Time.deltaTime;
+    }
+
+    if (Input.GetAxis("fire") > 0 && fire <= 0) {
+      fire = ps.fireCd;
+      Instantiate(firePrefab, firePoint.transform.position, Quaternion.identity);
     }
     /***/
   }

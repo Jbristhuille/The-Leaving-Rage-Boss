@@ -20,6 +20,9 @@ public class player_stats : MonoBehaviour {
   public float dashSpeed;
   public float dashDuration;
 
+  public float fireCd;
+  public float fireSpeed;
+
   // Start is called before the first frame update
   void Start() {
   }
