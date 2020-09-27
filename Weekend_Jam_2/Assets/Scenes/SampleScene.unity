@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -149,6 +150,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a3a4a614b965045baa8fcd77a769ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetX: -2.5
+  offsetY: 0.5
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -215,11 +230,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3300639370541637730, guid: 211923ee7a49423408d3733f3f564d9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.46
+      value: 7.6
       objectReference: {fileID: 0}
     - target: {fileID: 3300639370541637730, guid: 211923ee7a49423408d3733f3f564d9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.77
       objectReference: {fileID: 0}
     - target: {fileID: 3300639370541637730, guid: 211923ee7a49423408d3733f3f564d9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -257,10 +272,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3300639370541637733, guid: 211923ee7a49423408d3733f3f564d9b, type: 3}
-      propertyPath: dashSpeed
-      value: 800
-      objectReference: {fileID: 0}
     - target: {fileID: 3300639370541637735, guid: 211923ee7a49423408d3733f3f564d9b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -276,7 +287,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7852021229441508825, guid: 78fecbf28fb73c94981c1a02c3c0a2cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.209
+      value: 2.976
       objectReference: {fileID: 0}
     - target: {fileID: 7852021229441508825, guid: 78fecbf28fb73c94981c1a02c3c0a2cf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -320,7 +331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852021229441508825, guid: 78fecbf28fb73c94981c1a02c3c0a2cf, type: 3}
       propertyPath: m_LocalScale.x
-      value: 40.702633
+      value: 24.235855
       objectReference: {fileID: 0}
     - target: {fileID: 7852021229441508826, guid: 78fecbf28fb73c94981c1a02c3c0a2cf, type: 3}
       propertyPath: m_Name
