@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player_stats : MonoBehaviour {
   public bool isGrounded;
@@ -26,7 +27,7 @@ public class player_stats : MonoBehaviour {
   // Update is called once per frame
   void Update() {
     if (pv <= 0) { // Player death
-      Destroy(gameObject);
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
   }
 }
