@@ -1,5 +1,7 @@
-# Weekend-Jam-2
+# The leaving rage boss
 Weekend Jam #2 participation (https://itch.io/jam/weekend-jam-2)
+
+**Note**: Game only playable with controller
 
 ## Game plot
 
